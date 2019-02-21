@@ -1,4 +1,4 @@
-### build a docker image
+### build a docker image  --- ubuntu
 
 * 创建一个文件夹 <br/>
   sudo mkdir /var/www/html/docker1
