@@ -17,4 +17,4 @@ EXPOSE 80
 * 构建镜像 <br/>
  sudo docker build -t="dockertest1/test:v1" .
 * 运行 <br/>
- docker run -t -i e98d2c152d1d /bin/bash   //-i后为image的id
+ docker run -t -i e98d2c152d1d /bin/bash   //-i后为image的id, /bin/bash 表示启动容器后，启动bash，保持容器有一个进程在运行，不然容器会退出。
