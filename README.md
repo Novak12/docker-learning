@@ -21,4 +21,10 @@
 
 ### docker compose
 管理多个容器组成一个应用。<br/>
+docker-compose up ---根据docker-compose.yml文件，启动docker image <br/>
+docker-compose down --- 停止docker-compose <br/>
 
+docker-compose spa build ---编译某个镜像 <br/>
+
+当运行了docker-compose up后，要进入到某个容器中：<br/>
+docker exec -it ams_db bash  //ams_db为容器的名称
