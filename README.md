@@ -5,6 +5,7 @@
 * docker images //列出所有的镜像（top-level）
 * docker images -a  //列出所有镜像（top-level和只读层）
 * docker run  //创建并启动容器（它包含了两个执行动作，docker create和docker start）
+* docker image ls 仓库名+标签名  //列出某个镜像的具体信息
 
 * docker run --name bob_the_container -i -t ubuntu /bin/bash  (--name给容器命名。-i保证容器中STDIN是开启的，-t为容器分配一个伪tty终端)
 * docker build   //编译docker镜像
