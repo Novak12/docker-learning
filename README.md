@@ -17,8 +17,12 @@
 * 如何通过dockerfile创建一个docker image  <br/>
 对于一个项目，首先创建dockerfile
 * 如何给docker image设置标签便于引用  <br/>
-
+有了dockerfile后，使用docker build将app编译成docker image:<br/>
+docker build -t dockerapp:1.0 . 
 * 如何运行行的docker image  <br/>
+docker run --name=dockerapp -p 5000:80 -d dockerapp:1.0  //80是在dockerfile中设置暴露的接口<br/>
+* 查看image的日志 <br/>
+docker logs dockerapp
 
 ### docker compose
 管理多个容器组成一个应用。<br/>
