@@ -26,6 +26,10 @@ docker run --name=dockerapp -p 5000:80 -d dockerapp:1.0  //80是在dockerfile中
 * 查看image的日志 <br/>
 docker logs dockerapp
 
+### 将docker image推送到dockerhub
+1. docker login  //登陆到dockerhub <br/>
+2. docker push 用户名/镜像名   （目前测试的结果是：如果名称不符无法push上去，先使用tag命名修改名称）
+
 ### docker compose
 管理多个容器组成一个应用。<br/>
 docker-compose up ---根据docker-compose.yml文件，启动docker image <br/>
