@@ -12,6 +12,8 @@
 * docker commit //将一个docker容器提交为image
 * docker ps //列出所有运行中的容器
 * docker ps -a //列出所有的容器
+* docker rm *** //删除容器
+* docker rmi *** //删除镜像
 
 ### 创建一个docker应用
 * 如何通过dockerfile创建一个docker image  <br/>
