@@ -25,6 +25,8 @@ docker build -t dockerapp:1.0 .
 docker run --name=dockerapp -p 5000:80 -d dockerapp:1.0  //80是在dockerfile中设置暴露的接口<br/>
 * 查看image的日志 <br/>
 docker logs dockerapp
+* 如果想启动镜像，并进行交互式操作
+docker run -it dockerapp:1.0 bash
 
 ### 将docker image推送到dockerhub
 1. docker login  //登陆到dockerhub <br/>
