@@ -13,3 +13,8 @@ docker run -it --network=none busybox
 使用场景：
 * 容器对网络的传输效率较高，但是其带来的弊端就是可能会引起端口的使用冲突，如Host和容器使用了同一个端口。
 
+#### bridge网络
+可能我们都会有一个问题：未指定网络是，docker容器使用的是那种类型的网络？</br>
+答案是bridge网络，docker在安装时会创建一个名称为docker0的bridge网络，创建的容器默认会挂载在该网络上。</br>
+可以通过brtcl show命令来查看该docker0网络</br>
+
