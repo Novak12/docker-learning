@@ -18,3 +18,5 @@ docker run -it --network=none busybox
 答案是bridge网络，docker在安装时会创建一个名称为docker0的bridge网络，创建的容器默认会挂载在该网络上。</br>
 可以通过brtcl show命令来查看该docker0网络</br>
 
+#### user-defined网络
+以上三种网络都是自动创建的网络，用户可以根据业务需要创建user-defined网络，docker提供了三种user-defined网络驱动：bridge、overlay和macvlan。overlay和macvlan用于创建跨主机的网络。
