@@ -1,5 +1,10 @@
 # docker-learning
 
+#### 启动docker服务
+systemctl start docker.service
+#### 配置开机启动
+systemctl enable docker.service
+
 ### 基本指令
 * docker info  //返回所有容器和镜像
 * docker images //列出所有的镜像（top-level）
