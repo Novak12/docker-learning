@@ -37,3 +37,10 @@ docker  rm --v
 ```
 -v代表挂载数据卷，这里使用自定数据卷edc-nginx-vol，并且将数据卷挂载到 /usr/share/nginx/html （这个目录是yum安装nginx的默认网页目录）.</br>
 如果没有通过-v指定，那么Docker会默认帮我们创建匿名数据卷进行映射和挂载。</br>
+
+#### 清理卷
+```javascript
+# docker stop edc-nginx // 暂停容器实例
+# docker rm edc-nginx // 移除容器实例
+# docker volume rm edc-nginx-vol // 删除自定义数据卷
+```
