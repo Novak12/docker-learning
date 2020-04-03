@@ -24,3 +24,16 @@ docker run -it -h NEWCONTAINER --volumes-from container-test debian /bin/bash
 ```javascript
 docker  rm --v
 ```
+
+#### 管理卷
+```javascript
+# docker volume create edc-nginx-vol // 创建一个自定义容器卷
+# docker volume ls // 查看所有容器卷
+# docker volume inspect edc-nginx-vol // 查看指定容器卷详情信息
+```
+#### 创建使用指定卷的容器
+```javascript
+# docker run -d -it --name=edc-nginx -p 8800:80 -v edc-nginx-vol:/usr/share/nginx/html nginx
+```
+-v代表挂载数据卷，这里使用自定数据卷edc-nginx-vol，并且将数据卷挂载到 /usr/share/nginx/html （这个目录是yum安装nginx的默认网页目录）.</br>
+如果没有通过-v指定，那么Docker会默认帮我们创建匿名数据卷进行映射和挂载。</br>
